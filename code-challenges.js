@@ -2,38 +2,52 @@
 
 // --------------------1) Create a function that takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.
 
-var secretCodeWord1 = "lackadaisical"
+var secretCodeWord1 = "lackadaisical";
 // Expected output: "l4ck4d41s1c4l"
-var secretCodeWord2 = "gobbledygook"
+var secretCodeWord2 = "gobbledygook";
 // Expected output: "g0bbl3dyg00k"
 
+const coding = (array) => {
+	let code = array.split("").map((value) => {
+		if (value == "a") {
+			return "4";
+		}
+		if (value == "e") {
+			return "3";
+		}
+		if (value == "o") {
+			return "0";
+		}
+		if (value == "i") {
+			return "1";
+		} else {
+			return value;
+		}
+	});
+	return code.join("");
+};
 
-
-
+console.log(coding(secretCodeWorld1));
+console.log(coding(secretCodeWorld2));
 
 // --------------------2) Create a function that takes in an array and returns all the words that contain the letter a.
 
-var arrayOfWords = ["Apple", "Banana", "Plum", "Cherry", "Kiwi", "Peach"]
+var arrayOfWords = ["Apple", "Banana", "Plum", "Cherry", "Kiwi", "Peach"];
 // Expected output: "Apple" "Banana" "Peach"
-
-
-
-
 
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
 
-var hand1 = [5, 5, 5, 3, 3]
+var hand1 = [5, 5, 5, 3, 3];
 // Expected output: true
-var hand2 = [5, 5, 3, 3, 4]
+var hand2 = [5, 5, 3, 3, 4];
 // Expected output: false
-var hand3 = [5, 5, 5, 5, 4]
+var hand3 = [5, 5, 5, 5, 4];
 // Expected output: false
-var hand4 = [3, 5, 3, 5, 3]
+var hand4 = [3, 5, 3, 5, 3];
 // Expected output: true
-
 
 // STRETCH:
-var hand5 = ["K", 5, "K", 5, "K"]
+var hand5 = ["K", 5, "K", 5, "K"];
 // Expected output: true
-var hand6 = ["A", "Q", "A", 5, 3]
+var hand6 = ["A", "Q", "A", 5, 3];
 // Expected output: false
